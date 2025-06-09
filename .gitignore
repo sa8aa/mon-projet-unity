@@ -1,0 +1,49 @@
+# Dossiers Unity à ignorer
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# VSCode
+.vscode/
+
+# Fichiers générés automatiquement
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.pidb.meta
+
+# Fichiers de build
+*.apk
+*.aab
+*.unitypackage
+
+# Dossier Visual Studio
+.vs/
+
+# MacOS
+.DS_Store
+
+# Unity cache packages (inutile pour Git)
+Packages/com.unity.packagecache/
+
+# Crash logs
+*.stacktrace
