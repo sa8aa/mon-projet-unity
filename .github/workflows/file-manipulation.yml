@@ -1,0 +1,29 @@
+name: Automate File Manipulation
+
+on:
+  push:
+    paths:
+      - '**.txt'
+      - 'temp/**'
+      - '.github/workflows/file-manipulation.yml'
+
+jobs:
+  file-manipulation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare folders
+        run: |
+          mkdir -p logs
+          mkdir -p build-output
+
+      - name: Move .txt files to logs
+        run: |
+          mv *.txt logs/ || echo "No .txt files found"
+
+      - name: Remove temp folder
+        run: |
+          rm -rf temp || echo "No temp folder found"
